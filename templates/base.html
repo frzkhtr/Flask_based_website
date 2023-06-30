@@ -24,12 +24,14 @@
     <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
     <link rel=manifest href=/site.webmanifest>
     <link rel=canonical href=http://frzkhtr.github.io />
-    <link rel=alternate href=/index.xml type=application/rss+xml title="Faraz Akhtar">
-    <link rel=feed href=/index.xml type=application/rss+xml title="Faraz Akhtar">
-    <link rel=stylesheet href=/lib/normalize/normalize.min.css>
+    <link rel=alternate href="{{ url_for('static',filename='js/index.xml') }}" type=application/rss+xml
+        title="Faraz Akhtar">
+    <link rel=feed href="{{ url_for('static',filename='js/index.xml') }}" type=application/rss+xml title="Faraz Akhtar">
+    <link rel=stylesheet href="{{ url_for('static',filename='css/normalize.min.css') }}">
     <link rel=stylesheet href="{{ url_for('static',filename='css/style.min.css') }}">
-    <link rel=stylesheet href=/lib/fontawesome-free/all.min.css>
-    <link rel=stylesheet href=/lib/animate/animate.min.css>
+    <link rel=stylesheet href="{{ url_for('static',filename='css/all.min.css') }}">
+    <link rel=stylesheet href="{{ url_for('static',filename='css/animate.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
         type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","url":"http:\/\/frzkhtr.github.io\/","inLanguage":"en","description":"Personal Website","name":"Faraz Akhtar"}</script>
 </head>
@@ -47,7 +49,7 @@
                             href=/projects>Projects </a><a class=menu-item href=/blogs>blogs </a><a class=menu-item
                             href=/cv>CV </a><span class="menu-item delimiter"></span><a href=javascript:void(0);
                             class="menu-item theme-switch" title="Switch Theme">
-                            <i class="fas fa-adjust fa-fw"></i></a></div>
+                            <i class="fa fa-adjust"></i></a></div>
                 </div>
             </div>
         </header>
@@ -59,34 +61,28 @@
                 </div>
                 <div class=menu id=menu-mobile><a class=menu-item href=/about title>About</a><a class=menu-item
                         href=/projects title>Projects</a><a class=menu-item href=/blogs title>blogs</a><a
-                        class=menu-item href=/cv title>CV</a><a href=javascript:void(0);
-                        class="menu-item theme-switch" title="Switch Theme">
-                        <i class="fas fa-adjust fa-fw"></i></a></div>
+                        class=menu-item href=/cv title>CV</a><a href=javascript:void(0); class="menu-item theme-switch"
+                        title="Switch Theme">
+                        <i class="fa fa-adjust"></i></a></div>
             </div>
         </header>
         {% block body %}
         {% endblock%}
-        <link rel=stylesheet href=/home/doffy/Playground/frzkhtr.github.io-gh-pages/lib/katex/katex.min.css>
-        <link rel=stylesheet href=/home/doffy/Playground/frzkhtr.github.io-gh-pages/lib/katex/copy-tex.min.css>
-        <script type=text/javascript
-            src=/home/doffy/Playground/frzkhtr.github.io-gh-pages/lib/smooth-scroll/smooth-scroll.min.js></script>
-        <script type=text/javascript
-            src=/home/doffy/Playground/frzkhtr.github.io-gh-pages/lib/lazysizes/lazysizes.min.js></script>
-        <script type=text/javascript
-            src=/home/doffy/Playground/frzkhtr.github.io-gh-pages/lib/clipboard/clipboard.min.js></script>
-        <script type=text/javascript
-            src=/home/doffy/Playground/frzkhtr.github.io-gh-pages/lib/typeit/typeit.min.js></script>
-        <script type=text/javascript
-            src=/home/doffy/Playground/frzkhtr.github.io-gh-pages/lib/katex/katex.min.js></script>
-        <script type=text/javascript src=/home/doffy/Playground/frzkhtr.github.io-gh-pages/lib/katex/auto-render.min.js>
+        <link rel=stylesheet href="{{ url_for('static',filename='css/katex.min.css') }}">
+        <link rel=stylesheet href="{{ url_for('static',filename='css/copy-tex.min.css') }}">
+
+        <script type=text/javascript src="{{ url_for('static',filename='js/smooth-scroll.min.js') }}"></script>
+        <script type=text/javascript src="{{ url_for('static',filename='js/lazysizes.min.js') }}"></script>
+        <script type=text/javascript src="{{ url_for('static',filename='js/clipboard.min.js') }}"></script>
+        <script type=text/javascript src="{{ url_for('static',filename='js/typeit.min.js') }}"></script>
+        <script type=text/javascript src="{{ url_for('static',filename='js/katex.min.js') }}"></script>
+        <script type=text/javascript src="{{ url_for('static',filename='js/auto-render.min.js') }}">
     </script>
-        <script type=text/javascript
-            src=/home/doffy/Playground/frzkhtr.github.io-gh-pages/lib/katex/copy-tex.min.js></script>
-        <script type=text/javascript
-            src=/home/doffy/Playground/frzkhtr.github.io-gh-pages/lib/katex/mhchem.min.js></script>
+        <script type=text/javascript src="{{ url_for('static',filename='js/copy-tex.min.js') }}"></script>
+        <script type=text/javascript src="{{ url_for('static',filename='js/mhchem.min.js') }}"></script>
         <script
             type=text/javascript>window.config={code:{copyTitle:"Copy to clipboard",maxShownLines:10},data:{"id-1":"Data Scientist @ DSlab Cars24"},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1},typeit:{cursorChar:null,cursorSpeed:null,data:{"id-1":["id-1"]},duration:null,speed:null}}</script>
-        <script type=text/javascript src=/home/doffy/Playground/frzkhtr.github.io-gh-pages/js/theme.min.js></script>
+        <script type=text/javascript src="{{ url_for('static',filename='js/theme.min.js') }}"></script>
 </body>
 
 </html>
