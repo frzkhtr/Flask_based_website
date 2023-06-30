@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="search-dropdown desktop">
+    <div id=search-dropdown-desktop></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id=search-dropdown-mobile></div>
+</div>
+<main class=main>
+    <div class=container>
+        <div class="page single special">
+            <h1 class="single-title animated pulse faster">End To End Time Series Forecasting Solution</h1>
+            <div class=content id=content>
+                <p>It is an End-to-End solition to automate Time series Forecasting.</p>
+                <p>While working on any time series data, we have to go through many Data proprocessing steps
+                    followed by statistical tests. Depending on the componenets of timeseries data, one can
+                    logically transform the data fit for passing through any forecasting model.
+                    For ex: If Time series data shows Seasonality, one should go forward with any forecasting
+                    model that is not able to handle the seasonlity in Data. Along with that, user have to look
+                    for optimum seasonal parameters. This has to be done at every steps of statistical test.</p>
+                <p>The solution aims to automate all such things. It will preprocess the data under scope, do
+                    required statistical analysis, find optimum parameters, model selection and model tuning all
+                    under one hood. It will provide the forecast for the input horizon.</p>
+                <p>Preprocessing steps till now:</p>
+                <ul>
+                    <li>Missing data treatments</li>
+                    <li>Missing dates treatments</li>
+                    <li>Roll up options</li>
+                </ul>
+                <p>Statistical Tests till now:</p>
+                <ul>
+                    <li>White noise in data</li>
+                    <li>Check Stationarity(ADF test)</li>
+                    <li>Check seaonal component of Data</li>
+                    <li>Moving average(p), defferencing, Box-cox Transformation, Autoregressive value(q),
+                        lograthmic transformation.</li>
+                </ul>
+                <p>Models tested till now:</p>
+                <ul>
+                    <li>ARIMA, ARIMAX</li>
+                    <li>SARIMA, SARIMAX</li>
+                    <li>Baseline models(SMA, EA)</li>
+                    <li>LSTM</li>
+                </ul>
+                <p>Below are the architecture process of software:</p>
+                <p>
+                    <img src="{{url_for('static', filename='images/Architecture.jgp')}}" title=Architecture.jpg >
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+<div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top"><i
+            class="fas fa-arrow-up fa-fw"></i>
+    </a><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment fa-fw"></i></a>
+</div>
+{%endblock %}
